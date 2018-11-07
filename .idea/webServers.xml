@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="225c0e8b-f8dc-45d5-9ccd-c61a49b89375" name="atrixProd - Auvo" url="http://192.168.30.100">
+        <fileTransfer host="192.168.30.100" port="2425" rootFolder="/var/www/html/core/modules/addons/auvo" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="2425" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

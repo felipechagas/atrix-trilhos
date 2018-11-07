@@ -1,0 +1,38 @@
+/**
+    Style responsavel por formatar o conteudo do addon
+ */
+
+ .container-addon {
+    margin: -10px 10px 0px 10px;
+}
+
+.block-resize {
+    padding: 10px;
+    width: 100%;
+    resize: none;
+}
+
+.red {
+    color: $red;
+}
+
+.result-os{
+    padding-top: 5px;
+}
+
+.nowrap{
+    white-space: nowrap;
+}
+
+#table-tickets thead tr th{
+    text-align: center;
+}
+
+#table-tickets tbody tr td{
+    text-align: center;
+}
+
+.tab-tickets{
+    font-size: 20px;
+    font-weight: bold;
+}
