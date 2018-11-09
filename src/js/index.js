@@ -1,6 +1,7 @@
 import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css';
 import '../scss/style.scss';
 import '../../node_modules/moment/locale/pt-br';
+import '../../node_modules/animate.css/animate.css';
 import Vue from 'vue';
 import datePicker from 'vue-bootstrap-datetimepicker';
 import VueResource from 'vue-resource';
