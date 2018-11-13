@@ -1,0 +1,56 @@
+.tree ul {
+    list-style-type: none;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.node-tree {
+    cursor: pointer;
+}
+
+.node-tree span {
+    font-size: 16px !important;
+    color: black !important;
+}
+
+.tree-list ul {
+    padding-left: 30px !important;
+    margin: 6px 0;
+    border-left: 1px solid #ccc;
+}
+
+.tree-list ul li {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+    padding-right: 0px !important;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    border-radius: 3px !important;
+}
+
+ul.tree-list li.depth {
+    background-color: none;
+}
+
+ul.tree-list li.depth:hover {
+    background-color: none;
+}
+
+.tree-list ul li.depth0 {
+    background-color: none;
+}
+
+.tree-list ul li.depth0:hover {
+    background-color: #EAEAEA;
+}
+
+.tree-list ul li.depth1 {
+    background-color: none;
+}
+
+.tree-list ul li.depth1:hover {
+    background-color: #F2F2F2;
+}

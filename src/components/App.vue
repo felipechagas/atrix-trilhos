@@ -1,9 +1,7 @@
 <template lang="pug">
     div
         main-menu
-        trilhos-arvore
         router-view
-
 </template>
 
 <script>

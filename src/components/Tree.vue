@@ -1,20 +1,32 @@
 <template lang="pug">
-    
-    .tree
-        ul.tree-list
-            node-tree(:node="treeData" class="depth")
-            
+
+    .row
+        .col-lg-3
+            layer(:layerData="treeData")
+
+        .col-lg-3
+            layer(:layerData="treeData")
+
+        .col-lg-3
+            layer(:layerData="treeData")
+
+        .col-lg-3
+            layer(:layerData="treeData")
+
 </template>
 
 <script>
-    import NodeTree from "../components/NodeTree.vue";
+    import Layer from "../components/Layer.vue";
 
     export default {
+        name: "tree",
+
         props: {
             treeData: Object
         },
+
         components: {
-            NodeTree
+            Layer
         }
     };
 </script>

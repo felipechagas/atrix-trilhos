@@ -1,14 +1,14 @@
 <template lang="pug">
 
     li.node-tree
-        div(:class="{bold: (isFolder && open )}" @click="toggle" /*@dblclick="changeType"*/)
+        div(:class="{bold: (isFolder && open )}" @click="toggle" )
             span {{ node.label }}
             span(v-if="isFolder") [{{ open ? '-' : '+' }}]
 
         div
             transition(name="custom-classes-transition" enter-active-class="animated fadeInDown fastest" leave-active-class="animated fadeOutUp fastest")
                 ul(v-show="open" v-if="isFolder" )
-                    node-tree(v-for="child, i in node.children" :node="child" :key="i+1" :class="'depth'+node.depth" )
+                    node-tree(v-for="child, i in node.children" :node="child" :key="i+1" :class="'depth'+(node.depth%2)" )
 
 </template>
 
