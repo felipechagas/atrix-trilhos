@@ -1,17 +1,13 @@
 <template lang="pug">
 
-    .row
-        .col-lg-3
-            layer(:layerData="treeData")
+    .row.padding-row-ajust
+        layer(:layerData="treeData" :tdepth="0" :visible_prop="true" style="z-index: 5;")
 
-        .col-lg-3
-            layer(:layerData="treeData")
+        layer(:layerData="treeData" :tdepth="1" style="z-index: 4;")
 
-        .col-lg-3
-            layer(:layerData="treeData")
+        layer(:layerData="treeData" :tdepth="2" style="z-index: 3;")
 
-        .col-lg-3
-            layer(:layerData="treeData")
+        layer(:layerData="treeData" :tdepth="3" style="z-index: 2;")
 
 </template>
 

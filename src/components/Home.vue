@@ -58,68 +58,7 @@ export default {
                 }
             ]
         }
-
-        /*{
-            label: "Departamentos",
-            depth: 0,
-            children: [
-                {
-                    label: "Atendimento Prime",
-                    depth: 1,
-                    children: [
-                        {
-                            label: "Atendimento",
-                            depth: 2,
-                        },
-                        {
-                            label: "Cancelamento",
-                            depth: 2,
-                        },
-                        {
-                            label: "Informações",
-                            depth: 2,
-                        },
-                        {
-                            label: "Reclamação",
-                            depth: 2,
-                        },
-                        {
-                            label: "Solicitação",
-                            depth: 2,
-                            children: [
-                                {
-                                    label: "2ª via de Boleto",
-                                    depth: 3
-                                },
-                                {
-                                    label: "2ª Via de Boleto Smartzap",
-                                    depth: 3,
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    label: "Atendimento Varejo",
-                    depth: 1
-                },
-                {
-                    label: "Suporte DataCenter",
-                    depth: 1
-                },
-                {
-                    label: "CMO - Órgãos Públicos",
-                    depth: 1
-                },
-                {
-                    label: "Suporte Corporativo",
-                    depth: 1
-                }
-            ]
-        }*/
     }),
-
-    //window.location = '?module=mobix#!/listaDePontos';
     
     components: {
         Tree

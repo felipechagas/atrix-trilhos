@@ -1,44 +1,65 @@
 <template lang="pug">
-
-    ul
-        li(v-for="node in getNodes") 
-            | {{ node.label }}
-
+    transition(name="custom-classes-transition" enter-active-class="animated slideInLeft fastest" leave-active-class="animated slideOutLeft fastest")
+        .col-lg-3.padding-col-ajust(v-if="getVisibility")
+                .panel.panel-default
+                    ul.layer
+                        li(v-for="node in getNodes" @click="toggleLayer") 
+                            | {{ node.label }}
+                        img(v-if="isRoot" src="/modules/addons/trilhos/www/images/temp_image.jpeg")
 </template>
 
 <script>
-    export default {
-        name: "layer",
+export default {
+    name: "layer",
 
-        props: {
-            layerData: Object
-        },
+    props: {
+        layerData: Object,
+        tdepth: false
+    },
 
-        computed: {
-            getNodes: function () {
-                var temp_array = []
+    data: () => ({
+        visible: false
+    }),
 
-                if(this.layerData.depth == 0) {
-                    temp_array.push(this.layerData);
-                    return temp_array;
-                }
+    computed: {
+        getNodes: function () {
+            var temp_array = [];
 
-                for(var i; i<this.layerData.children.lenght; i++) {
-                    {
-                        if(this.layerData.children[i].depth == 1) temp_array.push(this.layerData.children[i]);
-                        if(this.layerData.children[i].depth == 2) temp_array.push(this.layerData.children[i]);
-                        if(this.layerData.children[i].depth == 3) temp_array.push(this.layerData.children[i]);
-                        if(this.layerData.children[i].depth == 4) temp_array.push(this.layerData.children[i]);
-                        if(this.layerData.children[i].depth == 5) temp_array.push(this.layerData.children[i]);
-                        if(this.layerData.children[i].depth == 6) temp_array.push(this.layerData.children[i]);
-                        if(this.layerData.children[i].depth == 7) temp_array.push(this.layerData.children[i]);
-                        if(this.layerData.children[i].depth == 8) temp_array.push(this.layerData.children[i]);
-                        if(this.layerData.children[i].depth == 9) temp_array.push(this.layerData.children[i]);
-                    }
-                }
-                
+            if (this.tdepth == 0) {
+                temp_array.push(this.layerData);
                 return temp_array;
             }
+
+            for (var i = 0; i < this.layerData.children.length; i++) {
+                if (this.layerData.children[i].depth == this.tdepth) temp_array.push(this.layerData.children[i]);
+            }
+
+            return temp_array;
+        },
+
+        getVisibility: function () {
+            if(this.tdepth == 0) return true;
+
+            return this.visible;
+        },
+
+        isRoot: function () {
+            if(this.tdepth == 0) return true;
+
+            return false;
         }
-    };
+    },
+
+    methods: {
+        toggleLayer: function () {
+            if(this.$parent.$children[this.tdepth+1].visible) {
+                for(var i=this.tdepth+1; i<=3; i++) {
+                    this.$parent.$children[i].visible = false;
+                }
+            }
+            
+            this.$parent.$children[this.tdepth+1].visible = true;
+        },
+    }
+};
 </script>

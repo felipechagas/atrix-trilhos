@@ -68,7 +68,8 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'bundle.vendor.js'}),
         new CopyWebpackPlugin([
             {from: './src/php/trilhos.php', to: path.resolve(__dirname, 'trilhos.php')},
-            {from: './src/icon/icone.png', to: path.resolve(__dirname, 'icone.png')}
+            {from: './src/icon/icone.png', to: path.resolve(__dirname, 'icone.png')},
+            {from: './src/images', to: "images"}
         ]),
         new HtmlWebpackLoader({
             template: './src/pug/index.pug',
