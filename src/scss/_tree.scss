@@ -1,6 +1,7 @@
 .layer {
     padding: 25px;
-    height: 300px;
+    height: 400px;
+    overflow: auto;
 }
 
 .padding-col-ajust {
@@ -31,4 +32,45 @@
 
 .padding-col-ajust ul li:hover {
     background-color: #ededed;
+}
+
+ul.root-tree-box {
+    background: none !important;
+    cursor: pointer;
+}
+
+ul.root-tree-box:hover {
+    background: #ededed !important;
+}
+
+li.root-tree {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px !important;
+}
+
+li.root-tree:hover {
+    background: none !important;
+}
+
+div.searchTree {
+    margin-bottom: 10px;
+}
+
+input.searchTree::after {
+    //font-family: 'Font Awesome 5 Free';
+    content: "teste";
+}
+
+a.btn-tree {
+    width: 100%;
+    margin: 5px 0; 
+}
+
+.disabled-tree {
+    cursor: no-drop !important;
+}
+
+.actions-tree {
+    min-height: 118px;
 }
